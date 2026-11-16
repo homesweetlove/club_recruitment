@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개발중인 AI사이트</title>
+    <title>동아리 모집</title>
     <style>
         * {
             margin: 0;
@@ -213,6 +213,7 @@
             position: fixed;
             top: 0;
             left: 0;
+            width: 0;
             height: 3px;
             background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
             z-index: 1001;
@@ -324,6 +325,8 @@
             height: 100%;
             background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-secondary) 50%, var(--accent-color) 100%);
             z-index: -2;
+            clip-path: inset(0 0 100% 0);
+            transition: clip-path 0.15s linear;
         }
 
         .parallax-layer {
@@ -995,7 +998,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-content">
-            <a href="#" onclick="showPage('home')" class="logo">Portfolio</a>
+            <a href="#" onclick="showPage('home')" class="logo">동아리 모집</a>
             <ul class="nav-center">
                 <li><a href="#" onclick="showPage('home')" class="nav-link active">HOME</a></li>
                 <li><a href="#" onclick="showPage('members')" class="nav-link">멤버</a></li>
@@ -1905,22 +1908,13 @@
             }
         }
 
-        // Parallax Effect
+        // Scroll-based orange fill effect
         function initParallax() {
             try {
-                const parallaxBg = document.getElementById('parallaxBg');
-                
-                window.addEventListener('scroll', () => {
-                    const scrolled = window.pageYOffset;
-                    const parallax = scrolled * 0.5;
-                    
-                    if (parallaxBg) {
-                        parallaxBg.style.transform = `translateY(${parallax}px)`;
-                    }
-                    
-                    updateProgressBar();
-                });
-                console.log('패럴랙스 효과 초기화 완료');
+                window.addEventListener('scroll', updateProgressBar, { passive: true });
+                window.addEventListener('resize', updateProgressBar);
+                updateProgressBar();
+                console.log('스크롤 채우기 효과 초기화 완료');
             } catch (error) {
                 console.error('패럴랙스 효과 초기화 오류:', error);
             }
@@ -1929,12 +1923,18 @@
         // Progress Bar
         function updateProgressBar() {
             const progressBar = document.getElementById('progressBar');
-            const scrollTop = window.pageYOffset;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
+            const parallaxBg = document.getElementById('parallaxBg');
+            const scrollTop = Math.max(0, window.pageYOffset);
+            const docHeight = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+            const scrollPercent = docHeight > 0
+                ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100))
+                : 0;
             
             if (progressBar) {
                 progressBar.style.width = scrollPercent + '%';
+            }
+            if (parallaxBg) {
+                parallaxBg.style.clipPath = `inset(0 0 ${100 - scrollPercent}% 0)`;
             }
         }
 
