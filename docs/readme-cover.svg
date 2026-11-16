@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title description">
+  <title id="title">Club Recruitment — Portfolio, Team, Study Archive</title>
+  <desc id="description">Minimal cream and charcoal cover with a restrained coral accent and two abstract document cards representing the portfolio and study archive.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#e8e8e3" stroke-width="0.7"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#303030" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="20" fill="#f9f9f6"/>
+  <rect width="1200" height="420" rx="20" fill="url(#grid)" opacity="0.47"/>
+  <rect x="0" y="0" width="9" height="420" rx="4" fill="#d95048"/>
+
+  <rect x="58" y="52" width="38" height="38" rx="10" fill="#d95048"/>
+  <path d="M81 64H70V78H81" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="83" cy="75" r="3" fill="#fff"/>
+  <text x="108" y="76" fill="#3b3c3b" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3">FRONTEND PROJECT</text>
+
+  <text x="57" y="161" fill="#202322" font-family="Inter, Arial, sans-serif" font-size="57" font-weight="800" letter-spacing="-1.5">CLUB</text>
+  <text x="57" y="227" fill="#202322" font-family="Inter, Arial, sans-serif" font-size="57" font-weight="800" letter-spacing="-2">RECRUITMENT<tspan fill="#d95048">.</tspan></text>
+  <text x="60" y="265" fill="#626966" font-family="Inter, Arial, sans-serif" font-size="18">A portfolio, team introduction, and study archive.</text>
+  <line x1="59" y1="309" x2="579" y2="309" stroke="#d7d9d5"/>
+  <text x="60" y="340" fill="#505652" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.7">01  MAIN SITE</text>
+  <text x="253" y="340" fill="#505652" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.7">02  STUDY ARCHIVE</text>
+  <text x="60" y="378" fill="#909692" font-family="Inter, Arial, sans-serif" font-size="12">HTML  /  CSS  /  JAVASCRIPT</text>
+
+  <circle cx="991" cy="160" r="133" fill="#f5e4e0"/>
+  <circle cx="991" cy="160" r="95" fill="none" stroke="#e7aca6" stroke-width="1" stroke-dasharray="4 9"/>
+  <circle cx="991" cy="160" r="50" fill="none" stroke="#dfa09a" stroke-width="1"/>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(680 88) rotate(-7 135 134)">
+      <rect width="255" height="267" rx="16" fill="#fff" stroke="#e7e9e5"/>
+      <rect width="255" height="49" rx="16" fill="#222624"/>
+      <rect y="35" width="255" height="15" fill="#222624"/>
+      <circle cx="21" cy="25" r="4" fill="#d95048"/>
+      <circle cx="36" cy="25" r="4" fill="#767f7a"/>
+      <circle cx="51" cy="25" r="4" fill="#767f7a"/>
+      <text x="22" y="89" fill="#d95048" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2">01 / EXPLORE</text>
+      <text x="21" y="128" fill="#262b28" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">PORTFOLIO</text>
+      <rect x="22" y="149" width="203" height="8" rx="4" fill="#e6e8e4"/>
+      <rect x="22" y="170" width="155" height="8" rx="4" fill="#e6e8e4"/>
+      <rect x="22" y="206" width="94" height="32" rx="8" fill="#d95048"/>
+      <text x="42" y="227" fill="#fff" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">VIEW</text>
+    </g>
+    <g transform="translate(908 140) rotate(8 105 111)">
+      <rect width="217" height="220" rx="15" fill="#fefefe" stroke="#e7e9e5"/>
+      <rect x="0" y="0" width="217" height="8" rx="4" fill="#d95048"/>
+      <text x="19" y="46" fill="#d95048" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2">02 / LEARN</text>
+      <text x="19" y="77" fill="#262b28" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800">STUDY</text>
+      <text x="19" y="102" fill="#262b28" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800">ARCHIVE</text>
+      <line x1="19" y1="124" x2="196" y2="124" stroke="#e9ebe7"/>
+      <text x="20" y="148" fill="#6e7670" font-family="Inter, Arial, sans-serif" font-size="11">C / PYTHON / WEB</text>
+      <rect x="19" y="162" width="117" height="7" rx="3.5" fill="#e4e7e3"/>
+      <rect x="19" y="179" width="157" height="7" rx="3.5" fill="#e4e7e3"/>
+    </g>
+  </g>
+</svg>
