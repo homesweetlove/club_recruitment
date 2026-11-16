@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Archive</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">Study Archive</h1>
+                <p class="subtitle">개발 학습 기록 보관소</p>
+            </div>
+        </header>
+
+        <!-- Filter Section -->
+        <nav class="filter-nav">
+            <div class="filter-container">
+                <button class="filter-btn active" data-tag="all">전체</button>
+                <button class="filter-btn" data-tag="c-language">C언어</button>
+                <button class="filter-btn" data-tag="python">파이썬</button>
+                <button class="filter-btn" data-tag="software-english">소프트웨어영어</button>
+                <button class="filter-btn" data-tag="basic-math">기초수학</button>
+            </div>
+        </nav>
+
+        <!-- Posts Grid -->
+        <main class="posts-container">
+            <div id="posts-grid" class="posts-grid">
+                <!-- Posts will be dynamically loaded here -->
+            </div>
+
+            <div id="no-posts" class="no-posts" style="display: none;">
+                <p>해당 태그의 게시글이 없습니다.</p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Study Archive. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

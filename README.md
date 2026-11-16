@@ -1,48 +1,58 @@
-# 환영합니다! 👋
+# Club Recruitment
 
-## 포트폴리오 
-[![포트폴리오](https://img.shields.io/badge/포트폴리오-FF4088?style=for-the-badge&logo=GitHub&logoColor=white)](https://zlem8952.github.io/remind.github.io/)
+팀 소개·프로젝트·활동·채용 안내 화면과 개발 학습 아카이브를 담은 **정적 웹사이트**입니다. 기존 `remind.github.io`의 메인 페이지와 학습 아카이브를 한 저장소의 `main` 브랜치로 통합했습니다.
 
-## 추천 영상 [G-DRAGON]
+## 페이지 구성
 
-[![G-DRAGON - 2024 MAMA AWARDS ICONIC STAGE](https://img.youtube.com/vi/jNjmTYxeIgU/0.jpg)](https://www.youtube.com/watch?v=jNjmTYxeIgU "G-DRAGON - 2024 MAMA AWARDS ICONIC STAGE")
+| 경로 | 내용 |
+| --- | --- |
+| [`index.html`](./index.html) | 메인 포트폴리오/팀 소개 페이지. 멤버, 프로젝트, 활동, 채용 화면과 다크·라이트 테마 전환 |
+| [`club/index.html`](./club/index.html) | 메인 페이지의 별도 경로 버전 |
+| [`study/index.html`](./study/index.html) | **Study Archive**. 카테고리 필터와 학습 글 목록 |
+| [`study/posts/`](./study/posts/) | C 언어, Python, 개발 영어, 기초 수학 관련 학습 글 8개 |
 
+메인 화면의 **Study Archive — 학습 노트 보기** 링크를 통해 학습 아카이브로 이동할 수 있습니다.
 
-## GitHub 통계
-![GitHub 통계](https://github-readme-stats.vercel.app/api?username=homesweetlove&show_icons=true&theme=radical)
+## 기술 구성
 
-## 매일 업데이트되는 명언
-[![Readme Quotes](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)](https://github.com/piyushsuthar/github-readme-quotes)
+- HTML5, CSS3, JavaScript (별도 프레임워크 없이 동작)
+- 메인 페이지: HTML 파일 내부 스타일·스크립트
+- Study Archive: `study/css/style.css`, `study/js/app.js` 및 `study/posts/` 문서
+- 별도 빌드 도구·데이터베이스·백엔드 서버 없음
 
-## 최근 활동
-<!--START_SECTION:activity-->
-<!--END_SECTION:activity-->
+## 로컬 실행
 
-## 기술 스택
-![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
-![iOS](https://img.shields.io/badge/Skill-30%25-brightgreen?style=for-the-badge&labelColor=000000)
+```bash
+git clone https://github.com/homesweetlove/club_recruitment.git
+cd club_recruitment
+python -m http.server 8000
+```
 
-![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-![Swift](https://img.shields.io/badge/Skill-10%25-brightgreen?style=for-the-badge&labelColor=FA7343)
+브라우저에서 다음 경로로 접속합니다.
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white)
-![Python](https://img.shields.io/badge/Skill-50%25-brightgreen?style=for-the-badge&labelColor=3776AB)
+- 메인: <http://localhost:8000/>
+- 클럽 페이지: <http://localhost:8000/club/>
+- 학습 아카이브: <http://localhost:8000/study/>
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![JavaScript](https://img.shields.io/badge/Skill-10%25-brightgreen?style=for-the-badge&labelColor=F7DF1E)
+정적 파일이므로 `index.html`을 직접 열 수도 있지만, 로컬 웹 서버를 사용하면 배포 환경에 가까운 경로로 확인할 수 있습니다.
 
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![PHP](https://img.shields.io/badge/Skill-0%25-brightgreen?style=for-the-badge&labelColor=777BB4)
+## 주의 사항
 
+> **지원 폼은 데모 UI입니다.** 브라우저에서 제출 확인 알림만 표시하며, 입력한 지원서는 서버로 전송되거나 저장되지 않습니다. 실제 모집·접수 기능으로 사용하려면 별도의 전송 및 개인정보 처리 기능을 구현해야 합니다.
 
-## GitHub 트로피
-[![trophy](https://github-profile-trophy.vercel.app/?username=homesweetlove)](https://github.com/ryo-ma/github-profile-trophy)
+사이트 안의 멤버 정보, 프로젝트 링크, 채용 일정 등 일부 콘텐츠는 예시 데이터입니다. 실제 운영 중인 모집 정보로 간주하지 마세요.
 
-## 주요 사용 언어
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=homesweetlove&layout=compact)
+## 배포
 
+GitHub Pages에서 **Settings → Pages → Deploy from a branch → main / (root)** 를 선택하면 정적 사이트를 배포할 수 있습니다.
 
-## 유머
-![Jokes Card](https://readme-jokes.vercel.app/api)
+설정 후 예상 경로:
 
-![xkcd Comic](https://imgs.xkcd.com/comics/compiling.png)
+- 메인: `https://homesweetlove.github.io/club_recruitment/`
+- 학습 아카이브: `https://homesweetlove.github.io/club_recruitment/study/`
+
+GitHub Pages 활성화 여부는 별도로 확인해야 합니다.
+
+---
+
+원본: [zlem8952/remind.github.io](https://github.com/zlem8952/remind.github.io)
